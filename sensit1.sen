@@ -1,0 +1,101 @@
+GLPK 5.0  - SENSITIVITY ANALYSIS REPORT                                                                         Page   1
+
+Problem:    
+Objective:  OBJ = 49750 (MINimum)
+
+   No. Row name     St      Activity         Slack   Lower bound       Activity      Obj coef  Obj value at Limiting
+                                          Marginal   Upper bound          range         range   break point variable
+------ ------------ -- ------------- ------------- -------------  ------------- ------------- ------------- ------------
+     1 _C1          NS     108.00000        .          108.00000      108.00000          -Inf   49750.00000 million_kWh_3_2
+                                         980.00000     108.00000      133.00000          +Inf   74250.00000 million_kWh_3_1
+
+     2 city_c1      NS      36.00000        .           36.00000       11.00000          -Inf   49250.00000 million_kWh_3_1
+                                          20.00000      36.00000       36.00000          +Inf   49750.00000 million_kWh_3_2
+
+     3 city_c2      NS      42.00000        .           42.00000       40.00000          -Inf   49710.00000 million_kWh_outside_network___2
+                                          20.00000      42.00000       42.00000          +Inf   49750.00000 million_kWh_3_2
+
+     4 city_c3      NS      30.00000        .           30.00000       25.00000          -Inf   49900.00000 million_kWh_3_3
+                                         -30.00000      30.00000       30.00000          +Inf   49750.00000 million_kWh_3_2
+
+     5 power_plant_c1
+                    NU      25.00000        .               -Inf         .               -Inf   63500.00000 million_kWh_1_3
+                                        -550.00000      25.00000       30.00000     550.00000   47000.00000 million_kWh_3_3
+
+     6 power_plant_c2
+                    NU      40.00000        .               -Inf         .               -Inf   77750.00000 million_kWh_2_2
+                                        -700.00000      40.00000       42.00000     700.00000   48350.00000 million_kWh_outside_network___2
+
+     7 power_plant_c3
+                    NU      30.00000        .               -Inf        5.00000          -Inf   62250.00000 million_kWh_3_1
+                                        -500.00000      30.00000       41.00000     500.00000   44250.00000 million_kWh_outside_network___1
+Changes in the right hand:
+The conclusion is that the dual price (slack marginal) remains valid only in the Activity range 2.67 hr
+	The rate of change in optimum z resulting from changing each of the constraints  1 unit can be computed as slack marginal/unit
+
+
+GLPK 5.0  - SENSITIVITY ANALYSIS REPORT                                                                         Page   2
+
+Problem:    
+Objective:  OBJ = 49750 (MINimum)
+
+   No. Column name  St      Activity      Obj coef   Lower bound       Activity      Obj coef  Obj value at Limiting
+                                          Marginal   Upper bound          range         range   break point variable
+------ ------------ -- ------------- ------------- -------------  ------------- ------------- ------------- ------------
+     1 million_kWh_1_1
+                    NL        .          600.00000        .            -5.00000     450.00000   49000.00000 million_kWh_3_3
+                                         150.00000          +Inf       25.00000          +Inf   53500.00000 million_kWh_1_3
+
+     2 million_kWh_1_2
+                    NL        .          700.00000        .            -5.00000     450.00000   48500.00000 million_kWh_3_3
+                                         250.00000          +Inf        2.00000          +Inf   50250.00000 million_kWh_outside_network___2
+
+     3 million_kWh_1_3
+                    BS      25.00000     400.00000        .            25.00000          -Inf          -Inf
+                                            .               +Inf         .          550.00000   53500.00000 million_kWh_1_1
+
+     4 million_kWh_2_1
+                    NL        .          320.00000        .            -2.00000     300.00000   49710.00000 million_kWh_outside_network___2
+                                          20.00000          +Inf       11.00000          +Inf   49970.00000 million_kWh_outside_network___1
+
+     5 million_kWh_2_2
+                    BS      40.00000     300.00000        .            40.00000          -Inf          -Inf
+                                            .               +Inf       29.00000     320.00000   50550.00000 million_kWh_2_1
+
+     6 million_kWh_2_3
+                    NL        .          350.00000        .              .          270.00000   49750.00000 million_kWh_3_2
+                                          80.00000          +Inf        5.00000          +Inf   50150.00000 million_kWh_3_3
+
+     7 million_kWh_3_1
+                    BS      25.00000     500.00000        .            25.00000          -Inf          -Inf
+                                            .               +Inf         .          650.00000   53500.00000 million_kWh_1_1
+
+     8 million_kWh_3_2
+                    BS        .          480.00000        .             5.00000     400.00000   49750.00000 million_kWh_2_3
+                                            .               +Inf         .               +Inf   49750.00000
+
+     9 million_kWh_3_3
+                    BS       5.00000     450.00000        .            30.00000     300.00000   49000.00000 million_kWh_1_1
+                                            .               +Inf      -35.00000     530.00000   50150.00000 million_kWh_2_3
+
+    10 million_kWh_outside_network___1
+                    BS      11.00000    1000.00000        .            13.00000     750.00000   47000.00000 million_kWh_1_2
+                                            .               +Inf      -29.00000    1020.00000   49970.00000 million_kWh_2_1
+
+GLPK 5.0  - SENSITIVITY ANALYSIS REPORT                                                                         Page   3
+
+Problem:    
+Objective:  OBJ = 49750 (MINimum)
+
+   No. Column name  St      Activity      Obj coef   Lower bound       Activity      Obj coef  Obj value at Limiting
+                                          Marginal   Upper bound          range         range   break point variable
+------ ------------ -- ------------- ------------- -------------  ------------- ------------- ------------- ------------
+    11 million_kWh_outside_network___2
+                    BS       2.00000    1000.00000        .            13.00000     980.00000   49710.00000 million_kWh_2_1
+                                            .               +Inf      -23.00000    1250.00000   50250.00000 million_kWh_1_2
+changes in the Objective coefficients
+Minimize z = c1x1 + c2x2
+
+
+
+End of report
